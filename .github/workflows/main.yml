@@ -55,6 +55,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          sudo docker pull kirenger1/first
+          sudo docker pull kirenger1/first:latest
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 kirenger1/first 
+          sudo docker run --rm -d -p 5000:5000 kirenger1/first:latest
